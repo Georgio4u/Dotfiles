@@ -1,0 +1,50 @@
+# ~/.config/starship.toml
+
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[✖](bold red) "
+vicmd_symbol = "[V](bold green) "
+format = "$symbol "
+
+[cmd_duration]
+min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
+format = " took [$duration]($style)"
+
+[directory]
+truncation_length = 5
+truncation_symbol = "(...) "
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+truncation_symbol = ''
+format = " [$symbol$branch]($style) "
+
+[git_commit]
+commit_hash_length = 7
+format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[git_status]
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[hostname]
+ssh_only = false
+trim_at = "-"
+disabled = false
+format = "[$hostname\\]]($style) "
+
+[package]
+disabled = true
+
+[username]
+show_always = true
+format = "[\\[$user]($style)@"
+
+[line_break]
+disabled = true
+
