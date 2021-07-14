@@ -7,6 +7,7 @@ autoload -U colors && colors
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/zsh_history
+[ ! -f $HISTFILE ] && mkdir -p ~/.cache/zsh
 setopt SHARE_HISTORY
 
 setopt  autocd autopushd

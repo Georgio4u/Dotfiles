@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 
     " Themes
     Plug 'gruvbox-community/gruvbox'
+    Plug 'arcticicestudio/nord-vim'
     Plug 'vim-airline/vim-airline'
 
     " Git plugins
